@@ -17,7 +17,7 @@ dependencies = [
 
 optional-dependencies.dev = ["pre-commit"]
 
-scripts.validate-filename = "ai_code_reviewer.py:generate"
+scripts.ai_code_reviewer = "ai_code_checker.ai_code_reviewer:generate"
 
 [tool.setuptools.packages.find]
 where = [
