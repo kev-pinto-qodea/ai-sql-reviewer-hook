@@ -26,3 +26,9 @@ where = [
 
 [tool.setuptools.dynamic]
 version = { attr = "filename_validation.__version__" }
+
+[tool.poetry.package.data]
+"ai_code_checker" = [
+    "system_prompt.md",
+    "system_context.md",
+]
