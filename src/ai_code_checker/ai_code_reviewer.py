@@ -6,6 +6,7 @@ from google import genai
 from google.genai import types
 import time
 import datetime  # For current date and time
+from pathlib import Path
 
 """
 SQL Code Reviewer using Google GenAI.
@@ -42,7 +43,7 @@ def read_system_context() -> str:
                     an unexpected error occurs during reading.
     """
     try:
-        with open("./system_context.md", "r", encoding="utf-8") as file:
+        with open(f"{Path( __file__ ).parent.absolute()}/system_context.md", "r", encoding="utf-8") as file:
             print("--- Reading System Context ---")
             lines_list = file.read()
             return lines_list
