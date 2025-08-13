@@ -85,7 +85,7 @@ Your report should cover the following areas of Compliance:
 * Table and column names follow the agreed naming conventions (e.g., snake_case, no ambiguous abbreviations).
 * No SELECT statements or queries that could result in excessive data scans or costs are present without justification.
 
-12. **Error Handling & Cleanup:*
+12. **Error Handling & Cleanup:**
 
 * Exception handling is present and robust.
 * All resources (temp tables, variables) are cleaned up appropriately.
