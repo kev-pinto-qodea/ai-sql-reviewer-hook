@@ -1,0 +1,15 @@
+# ai-sql-reviewer-hook/.pre-commit-hooks.yaml
+
+# This file defines the hooks that this repository provides.
+# It's used by other repositories referencing this one in their .pre-commit-config.yaml.
+
+-   id: ai-sql-review               # Unique identifier for the hook
+    name: Gemini Powered AI SQL Code Reviewer      # Human-readable name
+    description: Reviews SQL code using Google GenAI.
+    entry: python3 ai_code_reviewer.py      # The script to run (relative to repo root)
+    language: python                # The language of the hook script
+    types: [sql]                    # Apply to files of type 'sql' (pre-commit's type)
+    # If your hook has its own dependencies, pre-commit will use this file
+    # to create an isolated environment. Ensure it's in the repo root.
+    files: \.(sql)$                  # Regex to match .sql files
+    # require_serial: true # Optional: if multiple hooks might interact, ensures sequential execution
