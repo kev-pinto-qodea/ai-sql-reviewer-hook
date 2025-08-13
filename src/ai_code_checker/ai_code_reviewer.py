@@ -71,7 +71,7 @@ def read_prompt() -> str:
                     an unexpected error occurs during reading.
     """
     try:
-        with open(f"{Path( __file__ ).parent.absolute()}/system_prompt.py", "r", encoding="utf-8") as file:
+        with open(f"{Path( __file__ ).parent.absolute()}/system_prompt.md", "r", encoding="utf-8") as file:
             print("--- Reading System Prompt ---")
             lines_list = file.read()
             return lines_list
