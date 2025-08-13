@@ -1,0 +1,4 @@
+# ai-sql-reviewer-hook/MANIFEST.in
+
+# Include all .md files in the src directory and its subdirectories
+recursive-include src *.md

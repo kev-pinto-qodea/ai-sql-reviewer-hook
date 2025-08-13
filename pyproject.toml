@@ -26,6 +26,3 @@ where = [
 
 [tool.setuptools.dynamic]
 version = { attr = "filename_validation.__version__" }
-
-[tool.poetry]
-include = ["*.md"]
