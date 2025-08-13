@@ -6,6 +6,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ai-sql-reviewer-hook"
+readme = "README.md"
 version = "0.1.0" # Make sure this matches your Git tag if you have one
 description = "AI SQL Reviewer for pre-commit"
 requires-python = ">=3.8" # Specify a compatible Python version
@@ -13,3 +14,15 @@ dependencies = [
     "google-genai>=1.29.0", # List your main dependency here
     # If your script had other dependencies, list them too.
 ]
+
+optional-dependencies.dev = ["pre-commit"]
+
+scripts.validate-filename = "ai_code_reviewer.py:generate"
+
+[tool.setuptools.packages.find]
+where = [
+  "src",
+]
+
+[tool.setuptools.dynamic]
+version = { attr = "filename_validation.__version__" }
