@@ -43,7 +43,7 @@ def read_system_context() -> str:
                     an unexpected error occurs during reading.
     """
     try:
-        with open(f"{Path( __file__ ).parent.absolute()}/system_context.py", "r", encoding="utf-8") as file:
+        with open(f"{Path( __file__ ).parent.absolute()}/system_context.md", "r", encoding="utf-8") as file:
             print("--- Reading System Context ---")
             lines_list = file.read()
             return lines_list
