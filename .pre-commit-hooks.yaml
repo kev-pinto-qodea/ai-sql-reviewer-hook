@@ -6,7 +6,7 @@
 -   id: ai-sql-review               # Unique identifier for the hook
     name: Gemini Powered AI SQL Code Reviewer      # Human-readable name
     description: Reviews SQL code using Google GenAI.
-    entry: ai_code_reviewer.py      # The script to run (relative to repo root)
+    entry: ai_code_reviewer.py
     language: python                # The language of the hook script
     types: [sql]                    # Apply to files of type 'sql' (pre-commit's type)
     # If your hook has its own dependencies, pre-commit will use this file
