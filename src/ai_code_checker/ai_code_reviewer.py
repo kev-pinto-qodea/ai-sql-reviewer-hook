@@ -49,7 +49,7 @@ def read_system_context() -> str:
             return lines_list
     except FileNotFoundError:
         print(
-            f"Error: System Context file 'system_context.md' was not found in the current directory.{os. getcwd()}"
+            f"Error: System Context file 'system_context.md' was not found in the current directory.{os. getcwd() - Path( __file__ ).parent.absolute()}"
         )
         sys.exit(1)  # Exit if system context is missing, it's crucial for the review
     except Exception as e:
